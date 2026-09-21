@@ -6,24 +6,46 @@ log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
   type: vless
-  server: 172.64.42.85
-  port: 2052
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  server: 89.110.66.154
+  port: 443
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: cdn8848.776676.xyz
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+      Host: cdn8848.776676.xyz
 - name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
-  type: ss
-  server: 62.113.41.228
-  port: 2055
-  cipher: chacha20-ietf-poly1305
-  password: 7nzDcoQQxUYU35N5ngbSAg
+  type: vless
+  server: 146.185.178.18
+  port: 443
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
   udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: cdn8848.776676.xyz
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: cdn8848.776676.xyz
+- name: 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
+  type: vless
+  server: 109.107.155.76
+  port: 2053
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: cdn8848.776676.xyz
+  network: ws
+  ws-opts:
+    path: /tv/member/auth?ed=2560fp=chrome
+    headers:
+      Host: cdn8848.776676.xyz
 proxy-groups:
 - name: PROXIES
   type: select
@@ -31,6 +53,7 @@ proxy-groups:
   - AUTO
   - 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -38,5 +61,6 @@ proxy-groups:
   proxies:
   - 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
 rules:
 - MATCH,PROXIES
