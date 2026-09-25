@@ -38,7 +38,7 @@ proxies:
   servername: ''
   network: ws
   ws-opts:
-    path: /
+    path: ''
     headers:
       Host: ''
 proxy-groups:
