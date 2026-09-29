@@ -6,21 +6,7 @@ log-level: info
 proxies:
 - name: 🇮🇪 IE 01 - xiaohe
   type: vless
-  server: 104.21.46.14
-  port: 443
-  uuid: ea50b1a3-3a98-4c5e-a150-48ada40d68d7
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: cf-vless-4cf55824.aimall.fr
-  network: ws
-  ws-opts:
-    path: /connect
-    headers:
-      Host: cf-vless-4cf55824.aimall.fr
-- name: 🇮🇪 IE 02 - xiaohe
-  type: vless
-  server: 104.26.10.213
+  server: 45.141.234.138
   port: 443
   uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
   udp: true
@@ -29,24 +15,10 @@ proxies:
   servername: edgetunnel-4uw.pages.dev
   network: ws
   ws-opts:
-    path: /+
-    headers:
-      Host: edgetunnel-4uw.pages.dev
-- name: 🇮🇪 IE 03 - xiaohe
-  type: vless
-  server: 104.21.63.28
-  port: 443
-  uuid: 4c0b7280-76bb-495c-9c8b-f05712ebf805
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: youxuanku.kdns.fr
-  network: ws
-  ws-opts:
     path: /
     headers:
-      Host: youxuanku.kdns.fr
-- name: 🇮🇪 IE 04 - xiaohe
+      Host: edgetunnel-4uw.pages.dev
+- name: 🇮🇪 IE 02 - xiaohe
   type: vless
   server: 45.141.234.138
   port: 443
@@ -67,8 +39,6 @@ proxy-groups:
   - AUTO
   - 🇮🇪 IE 01 - xiaohe
   - 🇮🇪 IE 02 - xiaohe
-  - 🇮🇪 IE 03 - xiaohe
-  - 🇮🇪 IE 04 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -76,7 +46,5 @@ proxy-groups:
   proxies:
   - 🇮🇪 IE 01 - xiaohe
   - 🇮🇪 IE 02 - xiaohe
-  - 🇮🇪 IE 03 - xiaohe
-  - 🇮🇪 IE 04 - xiaohe
 rules:
 - MATCH,PROXIES
